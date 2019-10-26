@@ -13,13 +13,60 @@
 
     <link href="fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
 
-    <title>Quick Question</title>
+    <title>KeepUp App</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.2.2/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.2.2/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.2.2/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/7.2.2/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.2.2/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+    <script type="text/javascript">
+    var a = 10;
+    var b = 10;
+        window.onload = function () {
+            CanvasJS.addColorSet("greenShades",
+                [//colorSet Array
+
+                "#ff4d4d",
+                "#8ddf74"
+
+                ]);
+            var chart = new CanvasJS.Chart("chartContainer", {
+                title:{
+                    text: ""
+                },
+                colorSet: "greenShades",
+                data: [
+                {
+                    // Change type to "doughnut", "line", "splineArea", etc.
+                    type: "doughnut",
+                    dataPoints: [
+                        { label: "Falling Behind",  y: a  },
+                        { label: "Keeping Up", y: b  },
+                    ]
+                }
+                ]
+            });
+            chart.render();
+            function addOne() {
+              a++;
+            }
+        }
+    </script>
+
   </head>
 
   <body>
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <nav class="navbar navbar-expand-lg navbar-dark" id="mainNav">
                 <div class="container">
-                  <a class="navbar-brand js-scroll-trigger" href="/index.html">Quick Question</a>
+                  <a class="navbar-brand js-scroll-trigger" href="/index.html">KeepUp App</a>
                   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -54,11 +101,42 @@
                                     </div>
                                     <textarea rows="3" id="ask-question" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"></textarea>
                                 </div>
-                                <a href="#" class="btn btn-success">Submit Question</a>
+                                <a href="#" class="btn btn-success" onclick="writeUserData()">Submit Question</a>
                             </div>
                             </div>
+
+                            <div class="card">
+                              <div class="card-body">
+                                  <span class="fa-stack fa-2x">
+                                      <i class="fas fa-circle fa-stack-2x text-primary" ></i>
+                                      <i class="fas fa-smile-beam fa-stack-1x fa-inverse"></i>
+                                  </span>
+                                  <h2>Are You Understanding?</h2>
+                                      <p>You can place a vote once every minute.</p>
+                                  <div class="row">
+                                      <div class="col-md-12">
+                                          <span class="fa-stack fa-2x">
+                                              <i class="fas fa-circle fa-stack-2x"></i>
+                                              <i class="fas fa-thumbs-up fa-stack-1x fa-inverse"></i>
+                                          </span>
+
+
+                                          <span class="fa-stack fa-2x">
+                                              <i class="fas fa-circle fa-stack-2x"></i>
+                                              <i class="fas fa-thumbs-down fa-stack-1x fa-inverse thumbsdownred"></i>
+                                          </span>
+                                      </div>
+
+
+                                  </div>
+
+                                  <div id="chartContainer" style="height: 200px; width: 100%;"></div>
+                                  <h5 class="card-title">Class Comfort Level</h5>
+                              </div>
+                            </div>
+
                         </div>
-                        <div class="col-md">
+                        <div class="col-md-6">
                             <div class="card">
                             <div class="card-body">
                                 <span class="fa-stack fa-2x">
@@ -68,11 +146,11 @@
                                 <h3 class="card-title">Posted Questions</h3>
                                 <p class="card-text">Questions being viewed by classmates and teacher. Upvote questions to bring it to the teacher's attention.</p>
 
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
+                                <div class="input-group mb-3 questions" id="FirstOne">
+                                    <!-- <div class="input-group-prepend">
                                         <span class="input-group-text">{time}</span>
                                     </div>
-                                    
+
                                     <textarea rows="3" id="" type="text" class="form-control questions" aria-label="Default" aria-describedby="inputGroup-sizing-default" readonly>test</textarea>
 
                                     <div class="input-group-append">
@@ -83,13 +161,16 @@
                                             </span>
                                         </button>
                                         <span class="input-group-text">{0}</span>
-                                    </div>
+                                    </div> -->
                                 </div>
 
                             </div>
                             </div>
                         </div>
-                    </div>  
+
+
+
+                    </div>
                 </div>
 
 
@@ -99,5 +180,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script> -->
+    <script src="app.js"></script>
+
   </body>
 </html>

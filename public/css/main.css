@@ -27,3 +27,51 @@
 .questions-teacher {
     font-size: 22px;
 }
+
+.questions {
+  padding-bottom: 10px;
+}
+
+
+body {
+    background-color: rgb(56, 45, 59);
+    align-content: center;
+}
+
+
+#question-container {
+    padding: 30px;
+    padding-bottom: 5px;
+
+
+}
+
+.question-body {
+    height: 160px;
+}
+
+#questions-panel {
+    text-align: center;
+    width: 700px;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+
+.thumbsupgreen {
+    background-color: chartreuse;
+}
+
+.login {
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+    width: 600px;
+}
+
+.classCode {
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+    width: 300px;
+}
