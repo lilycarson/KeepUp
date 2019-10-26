@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link href="css/questions.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+    <link href="fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <title>KeepUp</title>
+
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script type="text/javascript">
+
+        window.onload = function () {
+            var chart = new CanvasJS.Chart("chartContainer", {
+                title:{
+                    text: ""              
+                },
+                data: [              
+                {
+                    // Change type to "doughnut", "line", "splineArea", etc.
+                    type: "doughnut",
+                    dataPoints: [
+                        { label: "Comfortable",  y: 10  },
+                        { label: "Not Comfortable", y: 15  },
+                    ]
+                }
+                ]
+            });
+            chart.render();
+        }
+        </script>
+
+  </head>
+
+  <body>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+                <div class="container">
+                  <a class="navbar-brand js-scroll-trigger" href="/index.html">Quick Question</a>
+                  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ml-auto">
+                      <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/student.html">Student View</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger active" href="/teacher.html">Teacher View</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+
+              <div id="main-cards" class="container text-center">
+                    <div class="row">
+                        <div class="col-md col-md-4">
+                            <div class="card">
+                            <div class="card-body">
+                                    <span class="fa-stack fa-2x">
+                                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                                        <a href="#"><i class="fas fa-smile-beam fa-stack-1x fa-inverse"></i></a>
+                                    </span>
+                                <h3 class="card-title">Class Comfort Level</h3>
+                                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                                
+                                
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-md col-md-8">
+                            <div class="card">
+                            <div class="card-body">
+                                <span class="fa-stack fa-2x">
+                                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                                    <a href="#"><i class="fas fa-chalkboard-teacher fa-stack-1x fa-inverse"></i></a>
+                                </span>
+                                <h3 class="card-title">Posted Questions</h3>
+                                <p class="card-text">Questions students are asking.</p>
+
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">{time}</span>
+                                    </div>
+                                    
+                                    <textarea rows="3" id="" type="text" class="form-control questions questions-teacher" aria-label="Default" aria-describedby="inputGroup-sizing-default" readonly>test</textarea>
+
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">Upvotes: {0}</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+#main-cards {
+    padding: 50px;
+    padding-top: 150px;
+}
+
+.card-title {
+    padding-top: 10px;
+}
+
+.card {
+    margin-bottom: 30px;
+}
+
+#ask-question {
+    height: 60px;
+}
+
+.form-control:read-only {
+    background-color: white;
+}
+
+.upvoteBtn {
+    font-size: 16px;
+
+}
+
+.questions-teacher {
+    font-size: 22px;
+}
