@@ -15,6 +15,8 @@ Visit keepup.space to get started. The platform offers two different perspective
 * [Firebase] - Database and hosting
 * [Bootstrap] - JavaScript framework
 
+## How We Would Further Develop KeepUp
+- 
 
 ## Authors
 
