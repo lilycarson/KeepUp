@@ -157,6 +157,37 @@ function buttonPressed(e) {
 
 }
 
+function upvote() {
+  
+
+  // var db = firebase.firestore();
+  //
+  // db.collection("Questions").doc(id).update({
+  //   importance: this+1
+  // });
+  const db = firebase.firestore();
+  const increment = firebase.firestore.FieldValue.increment(1);
+  const storyRef = db.collection('Comfort').doc("yes");
+  storyRef.update({ importance: increment });
+
+}
+
+
+function upvote() {
+  
+
+  // var db = firebase.firestore();
+  //
+  // db.collection("Questions").doc(id).update({
+  //   importance: this+1
+  // });
+  const db = firebase.firestore();
+  const increment = firebase.firestore.FieldValue.increment(1);
+  const storyRef = db.collection('Comfort').doc("no");
+  storyRef.update({ importance: increment });
+
+}
+
 
 // <div class="input-group mb-3">
 //     <div class="input-group-prepend">
