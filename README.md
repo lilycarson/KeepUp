@@ -16,11 +16,14 @@ Visit keepup.space to get started. The platform offers two different perspective
 * [Bootstrap] - JavaScript framework
 
 ## How We Would Further Develop KeepUp
-- 
+
 
 ## Authors
 
-See the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+Matthew Goodman - 
+Wassim
+Ryan
+Lily Carson - lilycarson42@gmail.com
 
 
 ## Acknowledgments
