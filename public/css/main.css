@@ -1,5 +1,5 @@
 #main-cards {
-    padding: 40px;
+    padding: 50px;
     padding-top: 50px;
 }
 
@@ -13,7 +13,7 @@
 }
 
 .card:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 #ask-question {
@@ -29,9 +29,48 @@
 
 }
 
+.voteButton {
+  transition: transform 0.2s;
+}
+
+.voteButton:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+
 .questions-teacher {
     font-size: 22px;
 }
+
+.questions {
+  padding-bottom: 10px;
+}
+
+
+body {
+    align-content: center;
+}
+
+
+#question-container {
+    padding: 30px;
+    padding-bottom: 5px;
+
+
+}
+
+.question-body {
+    height: 160px;
+}
+
+#questions-panel {
+    text-align: center;
+    width: 700px;
+    padding: 30px;
+    border-radius: 20px;
+}
+
 
 .thumbsupgreen {
     background-color: chartreuse;
@@ -39,34 +78,22 @@
 
 .login {
     margin: 0 auto;
-    float: none; 
+    float: none;
     margin-bottom: 10px;
     width: 600px;
 }
 
 .classCode {
     margin: 0 auto;
-    float: none; 
+    float: none;
     margin-bottom: 10px;
     width: 300px;
 }
 
-.yellowColour {
-    color: #fef400;
-}
-
-.yaleColourBlue {
-    color: #00326c;
-}
-
-.lightbluecolour {
-    color: #89e0ff;
-}
-
 .logo {
-    float: none; 
-    position: relative;
-    align-content: center;
+  float: none;
+  position: relative;
+  align-content: center;
 }
 
 #logoid {
@@ -76,15 +103,29 @@
   width: 450px;
 }
 
-.navbar {
-    background-color: white;
+
+.center {
+  margin: 0 auto;
+  float: none;
+  font-size: 10px;
+  margin-bottom: 10px;
+
+}
+
+.ptag {
+  font-size: 10px;
+}
+
+.progress-bar-danger {
+  background-color: yellow;
 }
 
 
-@media (max-width: 768px) {
-.questions-teacher {
-    font-size: 12px;
+.center1 {
+  padding-top: 50px;
+  margin: 0 auto;
+  float: none;
+  font-size: 10px;
+  margin-bottom: 10px;
+
 }
-    }
-
-
