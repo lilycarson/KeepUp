@@ -20,10 +20,10 @@ Visit keepup.space to get started. The platform offers two different perspective
 
 ## Authors
 
-Matthew Goodman - 
-Wassim
-Ryan
-Lily Carson - lilycarson42@gmail.com
+* Matthew Goodman - matthew.goodman2@mail.mcgill.ca
+* Wassim Khadim - wassim.khadim@mail.mcgill.ca
+* Ryan Hopson - rh1583@msstate.edu
+* Lily Carson - lily.carson@mail.mcgill.ca
 
 
 ## Acknowledgments
